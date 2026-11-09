@@ -1,12 +1,13 @@
 ---
 name: CI
 
-on:
-  pull_request:
-    branches: [master]
-  push:
-    branches: [master]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     branches: [master]
+#   push:
+#     branches: [master]
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

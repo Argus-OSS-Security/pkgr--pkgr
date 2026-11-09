@@ -1,13 +1,14 @@
 name: Publish
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - master
-      - feature/*
-      - fix/*
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches:
+#       - master
+#       - feature/*
+#       - fix/*
+# 
 concurrency:
   group: publish-images
   cancel-in-progress: false
